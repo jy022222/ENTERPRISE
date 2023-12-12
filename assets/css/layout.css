@@ -1,0 +1,172 @@
+@import './fonts.css';
+@import './reset.css';
+@import './common.css';
+
+/* header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(-100%);
+    transition: transform 1s, color .5s;
+    z-index: 9;
+}
+
+.header.show {
+    transform: translateY(0)
+}
+
+.header .inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.header .logo {
+    width: 100px;
+    padding: 17px 0;
+    box-sizing: border-box;
+}
+
+.header .logo a {
+    display: block;
+}
+
+.header .logo img {
+    width: 100%;
+    filter: brightness(0) invert(1);
+    transition: filter .5s;
+}
+
+.dark .header .logo img {
+    filter: brightness(0) invert(1) !important;
+}
+
+.header.black .logo img {
+    filter: brightness(1) invert(0);
+}
+
+.header .gnb>ul {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.header .gnb .menu a {
+    display: block;
+    padding: 23px 25px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.dark .header .gnb .menu a {
+    color: #fff !important
+}
+
+.header.black .gnb .menu a {
+    color: #000;
+}
+
+.header .lang_area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 20px 0 18px 25px;
+    cursor: pointer;
+}
+
+.header .lang_area .lang {
+    display: inline-block;
+    margin: 0 5px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.header.black .lang_area .lang {
+    color: #000;
+}
+
+.dark .header .lang_area .lang {
+    color: #fff !important;
+}
+
+.header.black .lang_area svg path {
+    stroke: #000;
+}
+
+.dark .header .lang_area svg path {
+    stroke: #fff;
+}
+
+.header .lang_area .lang_list {
+    position: absolute;
+    top: 53px;
+    right: 0;
+    text-align: center;
+    background: #000;
+    border: 1px solid #5a5a5a;
+    border-radius: 6px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+}
+
+.header .lang_area .lang_list.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.header .lang_area .lang_list a {
+    padding: 2px 14px 4px 13px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.33;
+}
+
+.header .lang_area .lang_list li:first-child a {
+    padding: 6px 14px 2px 13px;
+}
+
+.header .lang_area .lang_list li:last-child a {
+    opacity: 0.2;
+}
+
+/* footer */
+.footer {
+    position: relative;
+    padding: 0 100px;
+    background: #000;
+    color: #fff;
+}
+
+.footer_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 58px 0;
+}
+
+.footer .info_box {
+    font-size: 14px;
+}
+
+.footer .info_box p {
+    margin-top: 10px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.footer .logo_box {
+    width: 193px;
+}
+
+.footer .logo_box img {
+    width: 100%;
+}
